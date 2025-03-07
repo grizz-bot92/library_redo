@@ -41,8 +41,27 @@ function displayBook(myLibrary){
 
 }
 
+function updateUI(){
+    const content = document.querySelector('.content');
+    content.innerHTML = '';
 
-submitBtn.addEventListener("click", (addBookToLibrary))
+    myLibrary.forEach(item => {
+        const div = document.createElement('div');
+        div.classList.add('card');
+        div.textContent = 
+            `${item.title}<br>by ${item.author}`;
+        content.appendChild(div);
+    
+    });   
+}
+
+
+submitBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    addBookToLibrary(title, author, pages, read, id);
+    updateUI();
+
+})
 
 addBtn.addEventListener("click", () =>{
     dialog.showModal();
