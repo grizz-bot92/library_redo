@@ -56,16 +56,25 @@ function updateUI(){
 }
 
 
-submitBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    addBookToLibrary(title, author, pages, read, id);
-    updateUI();
-
-})
-
 addBtn.addEventListener("click", () =>{
     dialog.showModal();
 });
+
+submitBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const title = document.querySelector('#title').value;
+    const author = document.querySelector('#author').value;
+    pages = document.querySelector('#pages').value;
+    read = document.querySelector('#checkbox').checked;
+    id =  crypto.randomUUID()
+
+    
+    addBookToLibrary(title, author, pages, read, id);
+    updateUI();
+    dialog.close();
+
+})
 
 closeBtn.addEventListener("click", (e) =>{
     dialog.close();
