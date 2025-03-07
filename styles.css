@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(109, 109, 216);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    padding: 10px;
+    background-color: rgb(101, 176, 223);
+    margin: 10px;
+    border-radius: 25px;
+}
+
+.heading{
+    font-size: 3rem;
+    padding: 20px;
+}
+
+.tag {
+    margin-left: 50px;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 10vh;
+    margin: 10px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px rgb(134, 134, 3);
+    background-color: rgb(214, 214, 192);
+    grid-template-columns: 1fr;
+}
+
+.addBtn {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column ;
+    margin: 10px;
+    gap: 5px;
+    align-items: center;
+}
+
+dialog {
+    position: absolute;
+    background-color: rgb(240, 224, 224);
+    box-shadow: 2px 2px 5px rgb(158, 100, 80);
+    height: 310px;
+    width: 235px;
+    border: none;
+    border-radius:10px ;
+    padding: 10px;
+    align-items: center;
+    margin-left: 45%;
+    margin-top: 100px;
+}
+
+label {
+    display: flex;
+    margin-right: auto;
+    margin-bottom: 2px;
+}
+
+input:not([type="checkbox"]) {
+    border-radius: 5px;
+    padding:1px;
+    border: none;
+    box-shadow: 2px 2px 2px rgb(211, 43, 43);
+    outline-color: transparent;
+}
+
+.checkbox {
+    gap: 10px;
+    margin-top:10px ;
+}
+
+
+.submit {
+    background: none;
+    border: none;
+    color: rgb(211, 43, 43);
+    padding: 0;
+    cursor: pointer;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.closeBtn {
+    margin-left: auto;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 2px;
+    border: none;
+    color: rgb(211, 43, 43);
+}
+
+.content {
+    display: grid;
+    height: 500px;
+    margin: 10px ;
+    border-radius: 20px;
+    background-color: rgb(224, 154, 154);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card{
+    border: 1px solid black;
+}
+
+footer{
+    display: flex;
+    color: rgb(165, 220, 220);
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+    height: 50px;
+    border-top: 2px dashed black;
+}
