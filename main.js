@@ -47,8 +47,12 @@ function updateUI(){
 
     myLibrary.forEach(item => {
         const div = document.createElement('div');
+        const delBook = document.createElement('button');
         div.classList.add('card');
+        delBook.classList.add('delBook');
         div.innerHTML = `${item.title} <br> by ${item.author}`;
+        delBook.innerHTML = '<i class="fa-solid fa-trash"></i>'
+        div.append(delBook);
         content.appendChild(div);
     
     });   

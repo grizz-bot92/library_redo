@@ -112,6 +112,8 @@ input:not([type="checkbox"]) {
 }
 
 .content {
+    flex: 1;
+    overflow:auto;
     display: grid;
     height: 500px;
     margin: 10px ;
@@ -126,18 +128,29 @@ input:not([type="checkbox"]) {
 
 .card{
     display: flex;
-    font-size: 15px;
+    flex-direction: column;
+    max-width: 100%;
+    font-size: 1rem;
     font-weight: bold;
-    text-wrap: wrap;
     font-style: italic;
     align-items: center;
     justify-content: center;
-    background-image: url('book.png');
-    background-size: cover;
     background-position: center;
-    padding-bottom: 50px;
-    height: 175px;
+    color: rgb(221, 230, 239);
+    border: 1px solid rgb(77, 104, 186);
+    border-radius: 5px;
+    background-color: rgb(101, 176, 223);
+    box-shadow: 2px 2px 2px rgb(32, 28, 28);
+    height: 125px;
     width: 175px;
+}
+
+.delBook{
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    background:none;
+    border: none;
 }
 
 footer{
