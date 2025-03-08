@@ -48,8 +48,7 @@ function updateUI(){
     myLibrary.forEach(item => {
         const div = document.createElement('div');
         div.classList.add('card');
-        div.textContent = 
-            `${item.title}<br>by ${item.author}`;
+        div.innerHTML = `${item.title} <br> by ${item.author}`;
         content.appendChild(div);
     
     });   
@@ -65,9 +64,9 @@ submitBtn.addEventListener("click", (e) => {
 
     const title = document.querySelector('#title').value;
     const author = document.querySelector('#author').value;
-    pages = document.querySelector('#pages').value;
-    read = document.querySelector('#checkbox').checked;
-    id =  crypto.randomUUID()
+    const pages = document.querySelector('#pages').value;
+    const read = document.querySelector('#checkbox').checked;
+    const id =  crypto.randomUUID();
 
     
     addBookToLibrary(title, author, pages, read, id);

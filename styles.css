@@ -125,7 +125,19 @@ input:not([type="checkbox"]) {
 }
 
 .card{
-    border: 1px solid black;
+    display: flex;
+    font-size: 15px;
+    font-weight: bold;
+    text-wrap: wrap;
+    font-style: italic;
+    align-items: center;
+    justify-content: center;
+    background-image: url('book.png');
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 50px;
+    height: 175px;
+    width: 175px;
 }
 
 footer{
