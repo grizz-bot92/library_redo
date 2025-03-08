@@ -113,22 +113,23 @@ input:not([type="checkbox"]) {
 
 .content {
     flex: 1;
-    overflow:auto;
+    overflow: auto;
     display: grid;
     height: 500px;
     margin: 10px ;
     border-radius: 20px;
     background-color: rgb(224, 154, 154);
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(175px,  200px));
+    grid-template-rows: repeat(auto-fit, minmax(175px 1fr));
     gap: 20px;
     padding: 20px;
 }
 
 .card{
     display: flex;
+    flex-shrink: 2;
     flex-direction: column;
+    flex-wrap: wrap;
     max-width: 100%;
     font-size: 1rem;
     font-weight: bold;

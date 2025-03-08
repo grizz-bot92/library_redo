@@ -1,4 +1,4 @@
-const myLibrary = []
+let myLibrary = []
 
 const dialog = document.querySelector('dialog')
 const addBtn = document.querySelector('.addBtn');
@@ -6,6 +6,7 @@ const closeBtn = document.querySelector('.closeBtn')
 const deleteBtn = document.querySelector('.delBtn');
 const readBtn = document.querySelector('.read');
 const submitBtn = document.querySelector('.submit');
+const content = document.querySelector('.content');
 
 
 function Book (title, author, pages, read, id = crypto.randomUUID()){
@@ -45,17 +46,31 @@ function updateUI(){
     const content = document.querySelector('.content');
     content.innerHTML = '';
 
-    myLibrary.forEach(item => {
+    myLibrary.forEach(book => {
         const div = document.createElement('div');
         const delBook = document.createElement('button');
+        
         div.classList.add('card');
         delBook.classList.add('delBook');
-        div.innerHTML = `${item.title} <br> by ${item.author}`;
+        delBook.setAttribute('data-id', book.id)
+        div.innerHTML = `${book.title} <br> by ${book.author}`;
         delBook.innerHTML = '<i class="fa-solid fa-trash"></i>'
         div.append(delBook);
         content.appendChild(div);
     
     });   
+}
+
+content.addEventListener('click', (e) => {
+    if (e.target.closest('.delBook')){
+        const bookId = e.target.closest('.delBook').getAttribute('data-id');
+        removeBook(bookId)
+    };
+})
+
+function removeBook(id){
+    myLibrary = myLibrary.filter(book => book.id != id);
+    updateUI();
 }
 
 
