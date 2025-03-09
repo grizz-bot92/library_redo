@@ -42,14 +42,14 @@ body {
     grid-template-columns: 1fr;
 }
 
-.addBtn {
+.addBtn{
     cursor: pointer;
     border: none;
     background: none;
     font-size: 30px;
 }
 
-form {
+form{
     display: flex;
     flex-direction: column ;
     margin: 10px;
@@ -61,7 +61,7 @@ dialog {
     position: absolute;
     background-color: rgb(240, 224, 224);
     box-shadow: 2px 2px 5px rgb(158, 100, 80);
-    height: 350px;
+    height: 270px;
     width: 255px;
     border: none;
     border-radius:10px ;
@@ -71,7 +71,7 @@ dialog {
     margin-top: 100px;
 }
 
-label {
+label{
     display: flex;
     margin-right: auto;
     margin-bottom: 2px;
@@ -84,12 +84,6 @@ input:not([type="checkbox"]) {
     box-shadow: 2px 2px 2px rgb(211, 43, 43);
     outline-color: transparent;
 }
-
-.checkbox {
-    gap: 10px;
-    margin-top:10px ;
-}
-
 
 .submit {
     background: none;
@@ -127,9 +121,10 @@ input:not([type="checkbox"]) {
 
 .card{
     display: flex;
-    flex-shrink: 2;
+    flex-shrink: 1;
+    padding: 25px;
     flex-direction: column;
-    flex-wrap: wrap;
+    text-overflow: ellipsis;
     max-width: 100%;
     font-size: 1rem;
     font-weight: bold;
@@ -142,14 +137,20 @@ input:not([type="checkbox"]) {
     border-radius: 5px;
     background-color: rgb(101, 176, 223);
     box-shadow: 2px 2px 2px rgb(32, 28, 28);
-    height: 125px;
+    height: 175px;
     width: 175px;
+}
+
+.readCheck{
+    margin: 10px;
+    cursor: pointer;
+    width: 25px;
 }
 
 .delBook{
     cursor: pointer;
-    font-size: 1rem;
-    margin-top: 20px;
+    font-size: 1.1rem;
+    margin-top: 10px;
     background:none;
     border: none;
 }
@@ -163,3 +164,6 @@ footer{
     height: 50px;
     border-top: 2px dashed black;
 }
+
+
+

@@ -49,14 +49,24 @@ function updateUI(){
     myLibrary.forEach(book => {
         const div = document.createElement('div');
         const delBook = document.createElement('button');
+        const sliderLabel = document.createElement('label');
+        const readSlider = document.createElement('input');
+
+        readSlider.type = 'checkbox';
+        readSlider.classList.add('readCheck');
+        readSlider.checked = book.read;
+        readSlider.id = `read-${book.id}`;
         
         div.classList.add('card');
         delBook.classList.add('delBook');
         delBook.setAttribute('data-id', book.id)
-        div.innerHTML = `${book.title} <br> by ${book.author}`;
+        div.innerHTML = `${book.title} <br> ~ ${book.author}`;
+         
+        div.appendChild(readSlider);
         delBook.innerHTML = '<i class="fa-solid fa-trash"></i>'
         div.append(delBook);
         content.appendChild(div);
+        
     
     });   
 }
@@ -84,11 +94,11 @@ submitBtn.addEventListener("click", (e) => {
     const title = document.querySelector('#title').value;
     const author = document.querySelector('#author').value;
     const pages = document.querySelector('#pages').value;
-    const read = document.querySelector('#checkbox').checked;
+    // const read = document.querySelector('#checkbox').checked;
     const id =  crypto.randomUUID();
 
     
-    addBookToLibrary(title, author, pages, read, id);
+    addBookToLibrary(title, author, pages, id);
     updateUI();
     dialog.close();
 
